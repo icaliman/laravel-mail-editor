@@ -88,7 +88,7 @@ class mailEclipse
 
     public static function saveTemplates(Collection $templates)
     {
-        file_put_contents(self::getTemplatesFile(), $templates->toJson());
+        file_put_contents(self::getTemplatesFile(), json_encode($templates->values()));
     }
 
     public static function updateTemplate($request)
